@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="finaldisco">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.05856 -0.050352 0.0094433"
+        rpy="0 0 0" />
+      <mass
+        value="0.073498" />
+      <inertia
+        ixx="1.925E-05"
+        ixy="3.6044E-07"
+        ixz="-3.9256E-07"
+        iyy="2.318E-05"
+        iyz="-5.8078E-08"
+        izz="3.1391E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://finaldisco/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://finaldisco/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link 1">
+    <inertial>
+      <origin
+        xyz="0.0243883058826035 0.0078282631552608 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.00665132741228719" />
+      <inertia
+        ixx="1.80501946067506E-07"
+        ixy="1.65436122510606E-22"
+        ixz="2.22821777506472E-22"
+        iyy="1.57951267710339E-06"
+        iyz="3.97046694025453E-23"
+        izz="1.68762618694272E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://finaldisco/meshes/Link 1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://finaldisco/meshes/Link 1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Theta 1"
+    type="revolute">
+    <origin
+      xyz="-0.033181 -0.044796 0.02141"
+      rpy="-3.1192 -1.0613 -0.10885" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link 1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link 2">
+    <inertial>
+      <origin
+        xyz="0.0302514926730713 -6.93889390390723E-18 0.00782826315526088"
+        rpy="0 0 0" />
+      <mass
+        value="0.00695318083143008" />
+      <inertia
+        ixx="1.8165099810535E-07"
+        ixy="-1.70140712244501E-22"
+        ixz="-4.05318500150984E-23"
+        iyy="1.86549938464174E-06"
+        iyz="7.94093388050907E-23"
+        izz="1.75673967648042E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://finaldisco/meshes/Link 2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://finaldisco/meshes/Link 2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Theta 2"
+    type="revolute">
+    <origin
+      xyz="0.05 0 0"
+      rpy="1.5708 -1.2277 3.1416" />
+    <parent
+      link="Link 1" />
+    <child
+      link="Link 2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
